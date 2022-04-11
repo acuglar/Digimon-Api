@@ -13,3 +13,8 @@ export const List = styled.div`
 	font-size: calc(10px + 2vmin);
 	color: white;
 `
+
+export const FavoriteList = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+`
