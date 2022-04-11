@@ -1,4 +1,3 @@
-import './style.css';
 import DigimonCard from '../DigimonCard';
 
 const Digimons = props => {
