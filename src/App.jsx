@@ -18,40 +18,39 @@ class App extends Component {
 	}
 
 	handleFavorite = digimonSelected => {
-		const digimonExists = this.state.favorite.find(
+		const { favorite } = this.state;
+		const digimonExists = favorite.find(
 			digimon => digimon.name === digimonSelected.name
 		);
 
 		if (!digimonExists) {
-			this.setState({ favorite: [...this.state.favorite, digimonSelected] });
+			this.setState({ favorite: [...favorite, digimonSelected] });
 		}
 	};
 
 	handleRemove = digimonToBeDeleted => {
+		const { favorite } = this.state;
 		this.setState({
-			favorite: this.state.favorite.filter(
+			favorite: favorite.filter(
 				digimon => digimon.name !== digimonToBeDeleted.name
 			),
 		});
 	};
 
 	render() {
-		console.log(this.state.favorite);
+		const { digimons, favorite, error } = this.state;
 		return (
 			<Container>
-				{this.state.error && <div>{this.state.error}</div>}
+				{error && <div>{error}</div>}
 				<FavoriteList>
 					<Digimons
-						digimons={this.state.favorite}
+						digimons={favorite}
 						handleRemove={this.handleRemove}
 						favorite={true}
 					/>
 				</FavoriteList>
 				<List>
-					<Digimons
-						digimons={this.state.digimons}
-						handleFavorite={this.handleFavorite}
-					/>
+					<Digimons digimons={digimons} handleFavorite={this.handleFavorite} />
 				</List>
 			</Container>
 		);
