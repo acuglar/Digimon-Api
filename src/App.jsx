@@ -26,6 +26,9 @@ class App extends Component {
 		return (
 			<div className='App'>
 				{this.state.error && <div>{this.state.error}</div>}
+				<div>
+					<Digimons digimons={this.state.favorite} />
+				</div>
 				<main className='App-main'>
 					<Digimons
 						digimons={this.state.digimons}
