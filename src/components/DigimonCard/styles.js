@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { AiFillStar } from 'react-icons/ai';
 
 export const Card = styled.div`
 	padding: 10px;
@@ -8,7 +9,6 @@ export const Card = styled.div`
 	border-radius: 20px;
 	font-size: 10px;
 	color: rgb(231, 231, 231);
-
 `
 
 export const Image = styled.img`
@@ -16,5 +16,10 @@ export const Image = styled.img`
 	height: 30px;
 	border-radius: 30px;
 	object-fit: cover;
+`
 
+export const Star = styled(AiFillStar)`
+	color: yellow;
+	font-size: 15px;
+	padding-top: 8px
 `
