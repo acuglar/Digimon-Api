@@ -17,8 +17,14 @@ class App extends Component {
 			.catch(error => this.setState({ error }));
 	}
 
-	handleFavorite = digimon => {
-		this.setState({ favorite: [...this.state.favorite, digimon] });
+	handleFavorite = digimonSelected => {
+		const digimonExists = this.state.favorite.find(
+			digimon => digimon.name === digimonSelected.name
+		);
+
+		if (!digimonExists) {
+			this.setState({ favorite: [...this.state.favorite, digimonSelected] });
+		}
 	};
 
 	handleRemove = digimonToBeDeleted => {
