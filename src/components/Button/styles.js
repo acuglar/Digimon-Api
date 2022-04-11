@@ -1,4 +1,6 @@
-.btn {
+import styled from 'styled-components'
+
+export const ButtonStyled = styled.button`
 	margin-top: 5px;
 	width: 28px;
 	font-size: 6px;
@@ -7,4 +9,5 @@
 	border-radius: 10px;
 	background-color: deepskyblue;
 	cursor: pointer;
-}
+
+`
