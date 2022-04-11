@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const ButtonStyled = styled.button`
 	margin-top: 5px;
@@ -10,4 +10,11 @@ export const ButtonStyled = styled.button`
 	background-color: deepskyblue;
 	cursor: pointer;
 
-`
+	${(props) =>
+		props.isRemovable &&
+		css`
+			background: white;
+			color: red;
+			width: 44px;
+	`};
+`;

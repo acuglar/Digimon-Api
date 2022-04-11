@@ -1,7 +1,13 @@
 import Button from '../Button';
 import { Card, Image, Star } from './styles';
 
-const DigimonCard = ({ digimon, handleFavorite, handleRemove, favorite }) => {
+const DigimonCard = ({
+	digimon,
+	handleFavorite,
+	handleRemove,
+	favorite,
+	isRemovable,
+}) => {
 	const { name, img, level } = digimon;
 	return (
 		<Card>
@@ -13,7 +19,9 @@ const DigimonCard = ({ digimon, handleFavorite, handleRemove, favorite }) => {
 					<div>
 						<Star />
 					</div>
-					<Button handleEvent={() => handleRemove(digimon)}>Remove</Button>
+					<Button isRemovable={true} handleEvent={() => handleRemove(digimon)}>
+						Remove
+					</Button>
 				</>
 			) : (
 				<Button handleEvent={() => handleFavorite(digimon)}>Add</Button>

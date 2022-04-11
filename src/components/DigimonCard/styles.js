@@ -14,12 +14,13 @@ export const Card = styled.div`
 export const Image = styled.img`
 	width: 30px;
 	height: 30px;
+	margin: 10px 0;
 	border-radius: 30px;
 	object-fit: cover;
 `
 
 export const Star = styled(AiFillStar)`
 	color: yellow;
-	font-size: 15px;
+	font-size: 18px;
 	padding-top: 8px
 `

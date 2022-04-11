@@ -1,7 +1,11 @@
 import { ButtonStyled } from './styles.js';
 
-const Button = ({ children, handleEvent }) => {
-	return <ButtonStyled onClick={handleEvent}>{children}</ButtonStyled>;
+const Button = ({ children, handleEvent, isRemovable }) => {
+	return (
+		<ButtonStyled onClick={handleEvent} isRemovable={isRemovable}>
+			{children}
+		</ButtonStyled>
+	);
 };
 
 export default Button;
