@@ -5,7 +5,7 @@ const Digimons = props => {
 	return (
 		<>
 			{props.digimons.map((digimon, index) => (
-				<DigimonCard key={index} name={digimon.name} img={digimon.img} />
+				<DigimonCard key={index} digimon={digimon} />
 			))}
 		</>
 	);

@@ -1,12 +1,12 @@
 import './style.css';
-import Button from '../Button';
+// import Button from '../Button';
 
-const DigimonCard = props => {
+const DigimonCard = ({ digimon: { name, img, level } }) => {
 	return (
 		<div>
-			<div>{props.name}</div>
-			<img className='image' src={props.img} alt={props.name} />
-			<Button />
+			<div>{name}</div>
+			<img className='image' src={img} alt={name} />
+			<div>{level}</div>
 		</div>
 	);
 };
