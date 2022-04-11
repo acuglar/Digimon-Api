@@ -27,7 +27,7 @@ class App extends Component {
 			<div className='App'>
 				{this.state.error && <div>{this.state.error}</div>}
 				<div>
-					<Digimons digimons={this.state.favorite} />
+					<Digimons digimons={this.state.favorite} favorite={true} />
 				</div>
 				<main className='App-main'>
 					<Digimons

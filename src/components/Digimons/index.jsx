@@ -1,6 +1,6 @@
 import DigimonCard from '../DigimonCard';
 
-const Digimons = ({ digimons, handleFavorite }) => {
+const Digimons = ({ digimons, handleFavorite, favorite }) => {
 	return (
 		<>
 			{digimons.map((digimon, index) => (
@@ -8,6 +8,7 @@ const Digimons = ({ digimons, handleFavorite }) => {
 					key={index}
 					digimon={digimon}
 					handleFavorite={handleFavorite}
+					favorite={favorite}
 				/>
 			))}
 		</>
