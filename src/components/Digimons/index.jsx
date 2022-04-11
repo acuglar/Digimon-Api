@@ -3,9 +3,11 @@ import DigimonCard from '../DigimonCard';
 
 const Digimons = props => {
 	return (
-		<div>
-			<DigimonCard />
-		</div>
+		<>
+			{props.digimons.map((digimon, index) => (
+				<DigimonCard key={index} name={digimon.name} img={digimon.img} />
+			))}
+		</>
 	);
 };
 
