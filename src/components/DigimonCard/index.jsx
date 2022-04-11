@@ -3,7 +3,7 @@ import './style.css';
 
 const DigimonCard = ({ digimon: { name, img, level } }) => {
 	return (
-		<div>
+		<div className='card'>
 			<div>{name}</div>
 			<img className='image' src={img} alt={name} />
 			<div>{level}</div>
