@@ -15,6 +15,11 @@ class App extends Component {
 			.then(response => response.json())
 			.then(response => this.setState({ digimons: response }))
 			.catch(error => this.setState({ error }));
+
+		// then( response => {
+		//   return newArray = response.map( obj => {...obj, id: uuidv4()})
+		//   logica pra add id
+		// })
 	}
 
 	handleFavorite = digimonSelected => {
