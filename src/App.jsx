@@ -19,9 +19,9 @@ class App extends Component {
 		console.log(this.state.digimons);
 		return (
 			<div className='App'>
-				<header className='App-header'>
+				<main className='App-main'>
 					<Digimons digimons={this.state.digimons} />
-				</header>
+				</main>
 			</div>
 		);
 	}
