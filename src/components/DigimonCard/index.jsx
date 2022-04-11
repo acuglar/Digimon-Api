@@ -1,5 +1,6 @@
 import Button from '../Button';
 import { Card, Image } from './styles';
+import { AiFillStar } from 'react-icons/ai';
 
 const DigimonCard = ({ digimon, handleFavorite, favorite }) => {
 	const { name, img, level } = digimon;
@@ -9,7 +10,7 @@ const DigimonCard = ({ digimon, handleFavorite, favorite }) => {
 			<Image src={img}></Image>
 			<div>{level}</div>
 			{favorite ? (
-				<p>Favoritado</p>
+				<AiFillStar />
 			) : (
 				<Button handleFavorite={() => handleFavorite(digimon)}>Add</Button>
 			)}
