@@ -1,10 +1,14 @@
 import DigimonCard from '../DigimonCard';
 
-const Digimons = props => {
+const Digimons = ({ digimons, handleFavorite }) => {
 	return (
 		<>
-			{props.digimons.map((digimon, index) => (
-				<DigimonCard key={index} digimon={digimon} />
+			{digimons.map((digimon, index) => (
+				<DigimonCard
+					key={index}
+					digimon={digimon}
+					handleFavorite={handleFavorite}
+				/>
 			))}
 		</>
 	);

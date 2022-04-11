@@ -6,6 +6,7 @@ import Digimons from './components/Digimons';
 class App extends Component {
 	state = {
 		digimons: [],
+		favorite: [],
 	};
 
 	componentDidMount() {
@@ -15,12 +16,19 @@ class App extends Component {
 			.catch(error => console.log(error));
 	}
 
+	handleFavorite = digimon => {
+		this.setState({ favorite: [...this.state.favorite, digimon] });
+	};
+
 	render() {
-		console.log(this.state.digimons);
+		console.log(this.state.favorite);
 		return (
 			<div className='App'>
 				<main className='App-main'>
-					<Digimons digimons={this.state.digimons} />
+					<Digimons
+						digimons={this.state.digimons}
+						handleFavorite={this.handleFavorite}
+					/>
 				</main>
 			</div>
 		);
