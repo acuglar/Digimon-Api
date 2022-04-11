@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './App.css';
+import { Container, List } from './styles';
 
 import Digimons from './components/Digimons';
 
@@ -24,18 +24,18 @@ class App extends Component {
 	render() {
 		console.log(this.state.favorite);
 		return (
-			<div className='App'>
+			<Container>
 				{this.state.error && <div>{this.state.error}</div>}
 				<div>
 					<Digimons digimons={this.state.favorite} favorite={true} />
 				</div>
-				<main className='App-main'>
+				<List>
 					<Digimons
 						digimons={this.state.digimons}
 						handleFavorite={this.handleFavorite}
 					/>
-				</main>
-			</div>
+				</List>
+			</Container>
 		);
 	}
 }
