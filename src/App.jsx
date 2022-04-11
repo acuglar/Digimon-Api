@@ -7,13 +7,14 @@ class App extends Component {
 	state = {
 		digimons: [],
 		favorite: [],
+		error: '',
 	};
 
 	componentDidMount() {
 		fetch('https://digimon-api.vercel.app/api/digimon')
 			.then(response => response.json())
 			.then(response => this.setState({ digimons: response }))
-			.catch(error => console.log(error));
+			.catch(error => this.setState({ error }));
 	}
 
 	handleFavorite = digimon => {
@@ -24,6 +25,7 @@ class App extends Component {
 		console.log(this.state.favorite);
 		return (
 			<div className='App'>
+				{this.state.error && <div>{this.state.error}</div>}
 				<main className='App-main'>
 					<Digimons
 						digimons={this.state.digimons}
