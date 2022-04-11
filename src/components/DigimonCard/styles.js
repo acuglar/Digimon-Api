@@ -11,10 +11,10 @@ export const Card = styled.div`
 
 `
 
-export const Image = styled.div`
+export const Image = styled.img`
 	width: 30px;
 	height: 30px;
 	border-radius: 30px;
 	object-fit: cover;
-	
+
 `
