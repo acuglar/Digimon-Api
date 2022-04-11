@@ -1,4 +1,6 @@
-.card {
+import styled from 'styled-components'
+
+export const Card = styled.div`
 	padding: 10px;
 	margin: 10px;
 	background-color: rgb(98, 98, 98);
@@ -6,11 +8,13 @@
 	border-radius: 20px;
 	font-size: 10px;
 	color: rgb(231, 231, 231);
-}
 
-.image {
+`
+
+export const Image = styled.div`
 	width: 30px;
 	height: 30px;
 	border-radius: 30px;
 	object-fit: cover;
-}
+	
+`
