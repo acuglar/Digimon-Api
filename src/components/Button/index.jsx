@@ -1,7 +1,7 @@
 import './style.css';
 
-const Button = () => {
-	return <button>Add</button>;
+const Button = ({ children }) => {
+	return <button>{children}</button>;
 };
 
 export default Button;
